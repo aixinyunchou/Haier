@@ -1,6 +1,5 @@
 #ifndef __INCLUDES_H_
 #define __INCLUDES_H_
-
 #include "main.h"
 #include "stm32f4x7_eth.h"
 #include "tcpip.h"
@@ -16,4 +15,5 @@
 #include "i2c.h"
 #include "exti.h"
 #include "record.h"
+#include "wifi.h"
 #endif /* __INCLUDES_H_ */

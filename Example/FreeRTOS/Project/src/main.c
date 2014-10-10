@@ -117,10 +117,15 @@ void Main_task(void * pvParameters)
 	*/
 void Wifi_task(void * pvParameters)
 {
+	struct air_condition air_condition_wifi;
 	while(1)
 	{
-		vTaskDelay(2000);
 		uart_putstr("Wifi_task start.");
+		UhomeCom_1toX();
+		if(xQueueReceive(WifiReceQueue,&air_condition_wifi, 1)==pdPASS)
+		{
+			
+		}
 	}
 }
 

@@ -335,6 +335,7 @@ void Wifi_Uart(void);
 void Wifi_Test(void);
 void RxData_Deal(void);
 void Test_All(void);
+void UhomeCom_1toX(void);
 void UhomeCom_Reset(void);		// uhome通讯初始化
 void AlarmTmrRun();
 extern OUTYPE OutDoorUnitType;		// 外机类型，根据机型报对应故障代码
