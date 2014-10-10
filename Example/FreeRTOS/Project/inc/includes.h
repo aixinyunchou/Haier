@@ -2,8 +2,6 @@
 #define __INCLUDES_H_
 
 #include "main.h"
-#include "sdram.h"
-#include "lcd.h"
 #include "stm32f4x7_eth.h"
 #include "tcpip.h"
 #include "stdio.h"
