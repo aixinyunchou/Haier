@@ -1,5 +1,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "includes.h"
+#include "AC_Component.h"
 
 RTC_DateTypeDef RTC_DateStruct_get;
 RTC_TimeTypeDef RTC_TimeStruct_get;
@@ -25,7 +26,8 @@ int main(void)
 	xTaskCreate(Wifi_task, (int8_t *) "Wifi_task", STACK_WIFI_TASK,    NULL, WIFI_TASK,  NULL);
 	xTaskCreate(Touch_task, (int8_t *) "Touch_task", STACK_TOUCH_TASK, NULL, TOUCH_TASK, NULL);
 	xTaskCreate(DC_task, (int8_t *) "DC_task",     STACK_DC_TASK,      NULL, DC_TASK,    NULL);
-	xTaskCreate(AC_task, (int8_t *) "AC_task",     STACK_AC_TASK,      NULL, AC_TASK,    NULL);
+	//xTaskCreate(AC_task, (int8_t *) "AC_task",     STACK_AC_TASK,      NULL, AC_TASK,    NULL);
+	xTaskCreate( vTaskPrime, ( signed char * )"vTaskPrime", STACK_PRIME_LOC, ( void * )NULL, PRIOR_PRIME_LOC, NULL ) ;
  /* Start scheduler */
   vTaskStartScheduler();
 }
